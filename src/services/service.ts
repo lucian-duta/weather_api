@@ -1,18 +1,47 @@
-import {faker } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 
+
+//Weather Service
+export const generateLondonWeatherData = (): WeatherData => {
+  // Generate random weather data
+  const generatedWeatherData = {
+    temperature: faker.number.int({ min: -15, max: 30 }),
+    humidity: faker.number.int({ min: 79, max: 86 }),
+    wind: faker.number.int({ min: 2, max: 78 }),
+    rain: faker.number.int({ min: 65, max: 75 }),
+  };
+
+  // Return weather data
+  return generatedWeatherData;
+};
+
+export const generateDublinWeatherData = (): WeatherData => {
+  // Generate random weather data
+  const generatedWeatherData: WeatherData = {
+    temperature: faker.number.int({ min: -15, max: 30 }),
+    humidity: faker.number.int({ min: 79, max: 86 }),
+    wind: faker.number.int({ min: 2, max: 78 }),
+    rain: faker.number.int({ min: 65, max: 75 }),
+  };
+
+  // Return weather data
+  return generatedWeatherData;
+};
+
+
+
+
+//Flower Service
 
 //Rose flower
 export const generateRoseFlowerData = (): FlowerData => {
   // Generate random flower data
   const generatedFlowerData: FlowerData =  {
     name: "Rose",
-    colors: faker.helpers.arrayElements(["Red", "White", "Pink", "Yellow"]),
     temperature: faker.number.int({ min: 15, max: 25 }),
-    waterNeeds: faker.number.int({ min: 1, max: 5 }),
-    fertilizerNeeds: faker.number.int({ min: 2, max: 78 }),
+    waterNeeds: faker.number.int({ min: 2, max: 5 }),
+    fertilizerNeeds: faker.number.int({ min: 2, max: 4 }),
     sunHour: faker.number.int({ min: 4, max: 6 }),
-    growthRate: faker.helpers.arrayElement(["Moderate", "Fast"]),
-    bloomSeason: faker.helpers.arrayElements(["Spring", "Summer"]),
   };
 
   // Return flower data
@@ -24,13 +53,10 @@ export const generateRoseFlowerData = (): FlowerData => {
 export const generateLilyFlowerData = (): FlowerData => {
   const generatedFlowerData: FlowerData =  {
     name: "Lily",
-    colors: faker.helpers.arrayElements(["White", "Yellow", "Pink"]),
     temperature: faker.number.int({ min: 16, max: 24 }),
     waterNeeds: faker.number.int({ min: 3, max: 6 }),
     fertilizerNeeds: faker.number.int({ min: 2, max: 5 }),
     sunHour: faker.number.int({ min: 4, max: 6 }),
-    growthRate: faker.helpers.arrayElement(["Moderate", "Fast"]),
-    bloomSeason: ["Summer"],
   };
 
   return generatedFlowerData;
@@ -41,13 +67,10 @@ export const generateLilyFlowerData = (): FlowerData => {
 export const generateTulipFlowerData = (): FlowerData => {
   const generatedFlowerData: FlowerData =  {
     name: "Tulip",
-    colors: faker.helpers.arrayElements(["Red", "Yellow", "Pink", "White", "Purple", "Orange"]),
     temperature: faker.number.int({ min: 10, max: 18 }),
     waterNeeds: faker.number.int({ min: 2, max: 5 }),
-    fertilizerNeeds: faker.number.int({ min: 1, max: 3 }),
-    sunHour: faker.number.int({ min: 3, max: 5 }),
-    growthRate: faker.helpers.arrayElement(["Slow", "Moderate"]),
-    bloomSeason: ["Spring"],
+    fertilizerNeeds: faker.number.int({ min: 2, max: 4 }),
+    sunHour: faker.number.int({ min: 3, max: 5 })
   };
 
   return generatedFlowerData;
@@ -59,13 +82,10 @@ export const generateTulipFlowerData = (): FlowerData => {
 export const generateOrchidFlowerData = (): FlowerData => {
   const generatedFlowerData: FlowerData =  {
     name: "Orchid",
-    colors: faker.helpers.arrayElements(["White", "Pink", "Purple"]),
     temperature: faker.number.int({ min: 15, max: 29 }),
-    waterNeeds: faker.number.int({ min: 1, max: 4 }),
-    fertilizerNeeds: faker.number.int({ min: 1, max: 2 }),
+    waterNeeds: faker.number.int({ min: 2, max: 4 }),
+    fertilizerNeeds: faker.number.int({ min: 2, max: 4 }),
     sunHour: faker.number.int({ min: 2, max: 4 }),
-    growthRate: faker.helpers.arrayElement(["Slow"]),
-    bloomSeason: ["All year"],
   };
 
   return generatedFlowerData;
@@ -77,13 +97,10 @@ export const generateOrchidFlowerData = (): FlowerData => {
 export const generateHydrangeaFlowerData = (): FlowerData => {
   const generatedFlowerData: FlowerData =  {
     name: "Hydrangea",
-    colors: faker.helpers.arrayElements(["Blue", "Pink", "White", "Purple"]),
     temperature: faker.number.int({ min: 14, max: 20 }),
     waterNeeds: faker.number.int({ min: 4, max: 8 }),
-    fertilizerNeeds: faker.number.int({ min: 2, max: 6 }),
+    fertilizerNeeds: faker.number.int({ min: 2, max: 5 }),
     sunHour: faker.number.int({ min: 2, max: 5 }),
-    growthRate: faker.helpers.arrayElement(["Moderate"]),
-    bloomSeason: ["Spring", "Summer"],
   };
 
   return generatedFlowerData;
