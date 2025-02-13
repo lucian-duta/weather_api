@@ -25,3 +25,16 @@ export const generateDublinWeatherData = (): WeatherData => {
   // Return weather data
   return generatedWeatherData;
 };
+
+export const generateManchesterWeatherData = (): WeatherData => {
+  // Generate random weather data
+  const generatedWeatherData = {
+    temperature: faker.number.int({ min: -20, max: 20 }),
+    humidity: faker.number.int({ min: 70, max: 50 }),
+    wind: faker.number.int({ min: 5, max: 80 }),
+    rain: faker.number.int({ min: 50, max: 100 }),
+  };
+
+  // Return weather data
+  return generatedWeatherData;
+};
