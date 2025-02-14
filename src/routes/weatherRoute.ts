@@ -2,6 +2,7 @@ import express from "express";
 import { getWeatherData } from "../controllers/weatherController.js";
 import { validateCityName } from "../middleware/validators.js";
 
+
 // We will create a router object
 const router = express.Router();
 

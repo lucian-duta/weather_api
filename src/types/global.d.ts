@@ -4,3 +4,10 @@ interface WeatherData {
   wind: number;
   rain: number;
 }
+
+interface threeDayData{
+
+  dayOne:number;
+  dayTwo:number;
+  dayThree:number;
+}

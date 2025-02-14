@@ -7,11 +7,35 @@ export const generateLondonWeatherData = (): WeatherData => {
     humidity: faker.number.int({ min: 79, max: 86 }),
     wind: faker.number.int({ min: 2, max: 78 }),
     rain: faker.number.int({ min: 65, max: 75 }),
+    dayOne:faker.number.int({ min: 65, max: 75 }),
+    dayTwo:faker.number.int({ min: 65, max: 75 }),
+    dayThree:faker.number.int({ min: 65, max: 75 }),
+
   };
 
   // Return weather data
   return generatedWeatherData;
 };
+
+export const generateAgadirthreeDayData = (): WeatherData => {
+  // Generate random weather data
+  const generateAgadirthre = {
+    temperature: faker.number.int({ min: -15, max: 30 }),
+    humidity: faker.number.int({ min: 79, max: 86 }),
+    wind: faker.number.int({ min: 2, max: 78 }),
+    rain: faker.number.int({ min: 65, max: 75 }),
+    dayOne:faker.number.int({ min: 65, max: 75 }),
+    dayTwo:faker.number.int({ min: 65, max: 75 }),
+    dayThree:faker.number.int({ min: 65, max: 75 }),
+    
+  };
+  // Return weather data
+  return generateAgadirthre;
+};
+
+
+
+
 
 export const generateDublinWeatherData = (): WeatherData => {
   // Generate random weather data
@@ -20,6 +44,7 @@ export const generateDublinWeatherData = (): WeatherData => {
     humidity: faker.number.int({ min: 79, max: 86 }),
     wind: faker.number.int({ min: 2, max: 78 }),
     rain: faker.number.int({ min: 65, max: 75 }),
+    
   };
 
   // Return weather data
