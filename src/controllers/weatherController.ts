@@ -32,7 +32,6 @@ export const getWeatherData = async (req: Request, res: Response) => {
 
     // We will use an if statement to check which city was passed in
     if (city === "london") {
-      console.log(generateLondonWeatherData());
       finalWeatherData = generateLondonWeatherData();
     } else if (city === "dublin") {
       finalWeatherData = generateDublinWeatherData();
